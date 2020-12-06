@@ -1,5 +1,8 @@
 import './App.css';
-import {useState} from 'react'
+import {useState} from 'react';
+import { Button, FormControl, Input, InputLabel } from '@material-ui/core';
+import Todo from './Todo';
+
 
 function App() {
 
@@ -16,20 +19,29 @@ function App() {
   }
   return (
     <div className="App">
+      <h1>Add TODO App</h1>
       <form>
-        <input value = {input} 
-               onChange = {event => setInput(event.target.value)}/> 
-               {/* onChange capture what we are typing and we call an event to setInput value to show it on input field*/}
-        <button 
-          type = "submit"
-          onClick = {addTodo}>
+        {/* onChange capture what we are typing and we call an event to setInput value to show it on input field*/}
+
+        <FormControl>
+            <InputLabel>Write a todo</InputLabel>
+            <Input value = {input} 
+                   onChange = {event => setInput(event.target.value)}>
+            </Input>
+        </FormControl>
+
+        <Button variant="contained" 
+                color="primary"
+                type = "submit"
+                onClick = {addTodo}
+                disabled = {!input}>
             Add Todo
-        </button>
+        </Button>
 
         <ul>
           {
             todos.map(todo => (
-            <li>{todo}</li>
+              <Todo text = {todo} />
             ))
           }
         </ul>
