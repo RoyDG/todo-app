@@ -1,25 +1,37 @@
 import './App.css';
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import { Button, FormControl, Input, InputLabel } from '@material-ui/core';
 import Todo from './Todo';
+import db from './firebase';
+import firebase from 'firebase';
 
 
 function App() {
 
-  const [todos, setTodos] = useState(['todo state 1', 'todo state 2']);
+  const [todos, setTodos] = useState([]);
   const [input, setInput] = useState('');
+
+  //when the app loads we need to listen to the database and fetch new todos as they added/removed
+  useEffect( () => {
+        db.collection('todos').orderBy('timestamp', 'desc').onSnapshot( snapshot => {
+          setTodos(snapshot.docs.map( doc => doc.data().todo))
+        })
+  }, []);
 
   const addTodo = (event) => {
     //addTodo will hit when we click the button
       //this will stop whole page refreshing
     event.preventDefault();
-    setTodos([...todos, input]);
-    setInput(''); //clear the input after hit add Todo
-     
+
+    db.collection('todos').add({
+      todo: input,
+      timestamp: firebase.firestore.FieldValue.serverTimestamp()
+    })
+    setInput(''); //clear the input after hit add Todo   
   }
   return (
     <div className="App">
-      <h1>Add TODO App</h1>
+      <h1>Let's Add Your Task</h1>
       <form>
         {/* onChange capture what we are typing and we call an event to setInput value to show it on input field*/}
 
