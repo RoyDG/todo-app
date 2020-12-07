@@ -1,3 +1,17 @@
 .todo__list {
-  text-align: center;
+  text-align: center !important;
+}
+button:hover {
+  cursor: pointer;
+}
+
+.removeIcon:hover {
+  cursor: pointer;
+}
+.removeIcon {
+  color: red;
+}
+
+.listText {
+  margin-top: 20px !important;
 }
