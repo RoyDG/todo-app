@@ -1,17 +1,27 @@
-.todo__list {
-  text-align: center !important;
+.todo {
+  display: flex;
+  justify-content: space-around;
 }
+
+.list {
+  max-width: 100vh;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.removeIcon {
+  color: rgb(156, 36, 36);
+  margin: 8vh !important;
+}
+
+.listText {
+  margin-top: 20px !important;
+}
+
 button:hover {
   cursor: pointer;
 }
 
 .removeIcon:hover {
   cursor: pointer;
-}
-.removeIcon {
-  color: red;
-}
-
-.listText {
-  margin-top: 20px !important;
 }
