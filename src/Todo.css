@@ -1,21 +1,20 @@
 .todo {
-  display: flex;
-  justify-content: space-around;
+  margin: 0 10px 0 10px;
 }
 
 .list {
-  max-width: 100vh;
+  max-width: 200vh;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
 
 .removeIcon {
   color: rgb(156, 36, 36);
-  margin: 8vh !important;
+  margin-top: 6vh !important;
 }
 
 .listText {
-  margin-top: 20px !important;
+  margin-top: 5px !important;
 }
 
 button:hover {
