@@ -5,8 +5,20 @@
 
 .App > h1 {
   margin: 40px;
-  color: rgba(190, 37, 10, 0.575);
+  color: rgba(190, 37, 10, 0.698);
 }
+
 ul {
   padding: 0 !important;
+}
+
+.input {
+  width: 50% !important;
+  margin: 5px !important;
+}
+
+.button {
+  padding: -20px !important;
+  margin: 15px !important;
+  text-transform: inherit !important;
 }

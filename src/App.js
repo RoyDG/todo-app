@@ -35,19 +35,20 @@ function App() {
       <form>
         {/* onChange capture what we are typing and we call an event to setInput value to show it on input field*/}
 
-        <FormControl>
-            <InputLabel>Write a todo</InputLabel>
+        <FormControl className = "input">
+            <InputLabel>Write your task here...</InputLabel>
             <Input value = {input} 
                    onChange = {event => setInput(event.target.value)}>
             </Input>
         </FormControl>
 
-        <Button variant="contained" 
+        <Button className = "button"
+                variant="contained" 
                 color="primary"
                 type = "submit"
                 onClick = {addTodo}
                 disabled = {!input}>
-            Add Todo
+            Add Task
         </Button>
 
         <ul>

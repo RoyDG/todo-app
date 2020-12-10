@@ -3,14 +3,22 @@
 }
 
 .list {
-  max-width: 200vh;
+  max-width: 100% !important;
   display: flex;
   justify-content: space-between;
 }
 
 .removeIcon {
+  display: flex;
+  justify-content: space-between;
   color: rgb(156, 36, 36);
   margin-top: 6vh !important;
+  margin-right: 20px !important;
+}
+
+.editButton {
+  color: rgb(156, 36, 36);
+  margin-right: 20px !important;
 }
 
 .listText {
