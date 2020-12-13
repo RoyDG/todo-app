@@ -4,7 +4,7 @@ import { Button, FormControl, Input, InputLabel } from '@material-ui/core';
 import Todo from './Todo';
 import db from './firebase';
 import firebase from 'firebase';
-import SimpleModal from './SimpleModal';
+
 
 
 function App() {
@@ -59,12 +59,6 @@ function App() {
             ))
           }
         </ul>
-{/* 
-          {
-            todos.map(todo => (
-              <SimpleModal todo = {todo} />
-            ))
-          } */}
       </form>
          
     </div>
