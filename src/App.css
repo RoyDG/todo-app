@@ -6,6 +6,7 @@
 .App > h1 {
   margin: 40px;
   color: rgba(190, 37, 10, 0.698);
+  margin-top: 100px;
 }
 
 ul {
@@ -21,4 +22,21 @@ ul {
   padding: -20px !important;
   margin: 15px !important;
   text-transform: inherit !important;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(201, 205, 209);
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+.nav > img {
+  width: 50px;
+  margin: 10px;
+}
+
+.nav > b {
+  margin: 25px 20px 0 0;
 }

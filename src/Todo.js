@@ -50,12 +50,14 @@ function Todo(props) {
                     >
                     <div className={classes.paper}>
                         <h2>Edit Your Task</h2>
-                        <input  value = {input}
-                            placeholder = {props.todo.todo}
-                            onChange = {event => setInput(event.target.value)}/>
-                    <Button onClick = {update}>
-                                    Update
-                    </Button>
+                        <input  className = "updateInput"
+                                value = {input}
+                                placeholder = {props.todo.todo}
+                                onChange = {event => setInput(event.target.value)}/>
+                        <Button onClick = {update}
+                                className = "updateButton">
+                                Update
+                        </Button>
                     </div>
                     </Modal>
                 </div>
@@ -67,8 +69,8 @@ function Todo(props) {
                         </ListItemAvatar>  
                         <ListItemText
                             className = "listText"
-                            primary = "Task --"
-                            secondary = {props.todo.todo} 
+                            primary = "Task -- ✍ ✍  " 
+                            secondary = {props.todo.todo}
                         />
                         </ListItem>
                     </div>
@@ -79,8 +81,7 @@ function Todo(props) {
                                     className = "editButton"
                                     onClick = { handleOpen }>
                                         Edit                              
-                            </button>
-                            
+                            </button>                      
                         </div>
 
                         <DeleteOutlineIcon 

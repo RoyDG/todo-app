@@ -4,6 +4,8 @@ import { Button, FormControl, Input, InputLabel } from '@material-ui/core';
 import Todo from './Todo';
 import db from './firebase';
 import firebase from 'firebase';
+import todo from './todo.png';
+import Footer from './Footer';
 
 
 
@@ -32,8 +34,13 @@ function App() {
   }
   return (
     <div className="App">
+      <div className="nav">
+        <img src = {todo} alt="todo logo"/>
+        <b><i> 📓 Todo App</i></b>
+      </div>
       <h1>Let's Add Your Task</h1>
       <form>
+        
         {/* onChange capture what we are typing and we call an event to setInput value to show it on input field*/}
 
         <FormControl className = "input">
@@ -60,6 +67,7 @@ function App() {
           }
         </ul>
       </form>
+      <Footer/>
          
     </div>
   );
